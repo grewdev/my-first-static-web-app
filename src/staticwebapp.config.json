@@ -1,0 +1,12 @@
+{
+    "routes": [
+      {
+        "route": "/profile*",
+        "rewrite": "/index.html"
+      },
+      {
+        "route": "/login",
+        "rewrite": "/.auth/login/github"
+      }
+    ]
+}
