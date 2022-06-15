@@ -8,7 +8,12 @@
   "responseOverrides": {
     "401": {
       "statusCode": 302,
-      "redirect": "/.auth/login/aad"
+      "redirect": "/.auth/login/github"
     }
+  },
+  "networking": {
+    "allowedIpRanges": [
+      "194.39.218.10"
+    ]
   }
 }
