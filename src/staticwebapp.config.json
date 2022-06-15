@@ -1,16 +1,18 @@
 {
     "routes": [
       {
-        "route": "/*",
+        "route": "/account*",
         "allowedRoles": ["authenticated"]
       },
       {
         "route": "/profile.html",
         "allowedRoles": ["anonymous"]
-      },
-      {
-        "route": "/login",
-        "rewrite": "/.auth/login/github"
       }
-    ]
+    ],
+    "responseOverrides": {
+      "401": {
+        "statusCode": 302,
+        "redirect": "/.auth/login/github"
+      }
+    }
 }
