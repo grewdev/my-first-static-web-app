@@ -1,8 +1,12 @@
 {
     "routes": [
       {
-        "route": "/profile*",
+        "route": "/account*",
         "rewrite": "/index.html"
+      },
+      {
+        "route": "/profile.html",
+        "allowedRoles": ["anonymous"]
       },
       {
         "route": "/login",
